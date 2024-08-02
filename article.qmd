@@ -1,0 +1,38 @@
+---
+title: Untitled
+bibliography: references.bib
+format:
+  mwe-typst: 
+    keep_typ: true
+  native: default
+---
+
+## Task
+
+I want to create citations like @Tufte2001[p.30] and show it in the margin.
+A problem for the requirement bellow:
+
+```{=Typst}
+#place(dx:100%+1cm, [Please don't put the citation here.])
+```
+
+## Requirement
+I will need to pass a parameter for vertical displacement with something like @Typst2024[dy:5em] to move the citation 5em bellow.
+Also, I would need to be able to show a citation in full form @Labov1972[form: "full"]
+
+## Problem
+
+I receive a citation content in `margincite` and I can't do something like:
+```
+let margincite(citation) = context {
+    if query(bibliography).len()>0 {
+      let (key, supplement, form, style) = citation.fields()
+      citation
+      place(dy:2em, dx:100%+1cm)[#cite(key, form: "full")]
+    }
+  }
+```
+because this would lead to an infinite loop
+
+
+
