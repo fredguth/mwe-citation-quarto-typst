@@ -87,13 +87,18 @@
 
   let margincite(citation) = context {
     if query(bibliography).len()>0 {
-      // let (key, supplement, form, style) = citation.fields()
-      citation
-      place(dy:-2em, dx:100%+1cm)[#repr(citation)]
+      let (key, supplement, form, style) = citation.fields()
+      let sy= repr(supplement).slice(1,-1).split(",").filter(value => value.contains("dy."))
+      let y = if sy.len()>0 {sy.at(0).replace("dy.", "")} else {none}
+      if sy.len()>0 {supplement = repr(supplement).replace(sy.at(0), "").replace("[", "").replace("]", "").replace(",", "")}
+      
+      cite(key, form: "normal", supplement: supplement)
+      if y!=none {place(dy:eval(y), dx:100%+.1em)[#block(width: 7cm, inset:1em)[#cite(key, form:"full", supplement: supplement)]]}
+
     }
   }
 
-  show cite: margincite
+  show cite.where(form:"prose"): margincite
 
   place(dx: 100%, dy: 3cm, block(width: 7cm, height: 7cm, fill: rgb("#dbdbc5"))[
     #let n = 1
