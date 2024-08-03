@@ -4,12 +4,12 @@ bibliography: references.bib
 format:
   mwe-typst: 
     keep_typ: true
-  native: default
+  # native: default
 ---
 
 ## Task
 
-I want to create citations like @Tufte2001[p.30] and show it in the margin.
+I want to create citations like @Tufte2001[p.30, dy.-3.5cm] and show it in the margin.
 A problem for the requirement bellow:
 
 ```{=Typst}
@@ -17,8 +17,8 @@ A problem for the requirement bellow:
 ```
 
 ## Requirement
-I will need to pass a parameter for vertical displacement with something like @Typst2024[dy:5em] to move the citation 5em bellow.
-Also, I would need to be able to show a citation in full form @Labov1972[form: "full"]
+I will need to pass a parameter for vertical displacement with something like @Typst2024[dy.-4cm] to move the citation 5em bellow.
+Also, I would need to be able to show a citation in full form @Labov1972[pp.40, dy.4.5cm]
 
 ## Problem
 
