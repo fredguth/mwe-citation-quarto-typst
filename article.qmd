@@ -20,8 +20,11 @@ A problem for the requirement bellow:
 I will need to pass a parameter for vertical displacement with something like @Typst2024[dy.-4cm] to move the citation 5em bellow.
 Also, I would need to be able to show a citation in full form @Labov1972[pp.40, dy.4.5cm]
 
-## Problem
-
+## Problems
+- Why the comma in `[2,]`?
+- Why supplement does not appear in bib entry (form: full)?
+- This code is ugly as hell, could it be cleaner?
+<!-- 
 I receive a citation content in `margincite` and I can't do something like:
 ```
 let margincite(citation) = context {
@@ -34,5 +37,5 @@ let margincite(citation) = context {
 ```
 because this would lead to an infinite loop
 
-
+ -->
 
