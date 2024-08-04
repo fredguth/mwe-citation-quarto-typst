@@ -8,7 +8,8 @@
 
     cite(key, form: "normal", supplement: supplement)
     if dy!=none {
-      place(dy:dy, dx:100%+.1em)[#block(width: 7cm, inset:1em)[#cite(key, form:"full", supplement: supplement)]]
+      
+      [#place(dy:dy, dx:100%+.1em)[#block(width: 7cm, inset:1em)[#cite(key, form:"full", supplement: supplement)]]]
       
     }
   }
