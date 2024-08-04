@@ -1,3 +1,4 @@
+#import "@preview/drafting:0.2.0": *
 
 #let margincite(key, mode, prefix, suffix, noteNum, hash) = context {
   if query(bibliography).len()>0 {
@@ -8,8 +9,8 @@
 
     cite(key, form: "normal", supplement: supplement)
     if dy!=none {
-      
-      [#place(dy:dy, dx:100%+.1em)[#block(width: 7cm, inset:1em)[#cite(key, form:"full", supplement: supplement)]]]
+      set text(size: 8pt)
+      [#margin-note(dy:dy, dx:100%+.1em)[#block(width: 7cm, inset:1em)[#cite(key, form:"full", supplement: supplement)]]]
       
     }
   }
@@ -103,6 +104,15 @@
  
 
   show cite.where(form:"prose"): none
+
+  // set-page-properties()
+  set-margin-note-defaults(
+    stroke: none,
+    side: right,
+    margin-right: 7cm,
+    margin-left: 1cm,
+    page-width: 21cm-8.25cm
+  )
 
   place(dx: 100%, dy: 3cm, block(width: 7cm, height: 7cm, fill: rgb("#dbdbc5"))[
     #let n = 1
