@@ -4,8 +4,6 @@ bibliography: references.bib
 
 format:
   mwe-typst: 
-    # filters:
-    #   - _extensions/mwe/margin-cites.lua
     keep-typ: true
   # native: default
 ---
