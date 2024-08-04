@@ -1,11 +1,12 @@
 ---
 title: Untitled
 bibliography: references.bib
-filters:
-  - margin-cites.lua
+
 format:
   mwe-typst: 
-    keep_typ: true
+    filters:
+      - _extensions/mwe/margin-cites.lua
+    keep-typ: true
   # native: default
 ---
 
@@ -18,7 +19,9 @@ I want to create citations like @Tufte2001[p.30, dy.-3.5cm] and show it in the m
 Another citation @Labov1972[dy.-3.5cm] and @Tufte[dy.6cm]
 
 ## Problems
-The only problem I see now is that supplements like `p.30` should be part of the full citation text. Something like 
+-  linebreak: `#margincite` is breaking the line after the citation.  
+
+- Supplements in bib entry: `p.30` should be part of the full citation text. Something like 
 
 ````
 [1] E. R. Tufte, Visual Display of Quantitative Information, Second. Chesire, Con-

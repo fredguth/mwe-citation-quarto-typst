@@ -12,3 +12,6 @@ contributes:
         - notes.typ
         - definitions.typ
         - biblio.typ
+    mwe-typst:
+      filters:
+        - margin-cites.lua

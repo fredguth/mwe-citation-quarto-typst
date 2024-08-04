@@ -16,7 +16,6 @@ function Cite(cite)
     )
 
     return pandoc.Inlines({
-        cite,
         pandoc.RawInline('typst', typst_call)
     })
 end
