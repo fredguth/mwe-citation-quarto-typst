@@ -1,17 +1,1 @@
-# Mwe Format
-
-## Installing
-
-_TODO_: Replace the `<github-organization>` with your GitHub organization.
-
-```bash
-quarto use template <github-organization>/mwe
-```
-
-This will install the format extension and create an example qmd file
-that you can use as a starting place for your document.
-
-## Using
-
-_TODO_: Describe how to use your format.
-
+<img width="1007" alt="image" src="https://github.com/user-attachments/assets/18f3001b-0e9b-48ed-832d-26b2df93dcaf">
