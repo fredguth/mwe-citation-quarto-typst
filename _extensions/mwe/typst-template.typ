@@ -105,14 +105,15 @@
 
   show cite.where(form:"prose"): none
 
-  // set-page-properties()
+  // set-page-properties() // I don't want it to calculate, I want to give my calculations
   set-margin-note-defaults(
     stroke: none,
     side: right,
-    margin-right: 7cm,
+    margin-right: 1cm, // 1cm is absurd.. just to show that it is being ignored!!!
     margin-left: 1cm,
     page-width: 21cm-8.25cm
   )
+  // set-page-properties()
 
   place(dx: 100%, dy: 3cm, block(width: 7cm, height: 7cm, fill: rgb("#dbdbc5"))[
     #let n = 1

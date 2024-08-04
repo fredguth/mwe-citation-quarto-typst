@@ -16,11 +16,11 @@ I want to create citations like @Tufte2001[p.30, dy.-3.5cm] and show it in the m
 
 ... done!!!
 
-Another citation @Labov1972[dy.-3.5cm] and @Tufte[dy.6cm]
+Another citation @Labov1972[dy.-3.5cm] and @Tufte[dy.7cm]
 
 ## Problems
--  linebreak: `#margincite` is breaking the line after the citation.  
-
+-  ~~linebreak: `#margincite` is breaking the line after the citation.~~
+- drafting/margin-note ignoring settings
 - Supplements in bib entry: `p.30` should be part of the full citation text. Something like 
 
 ````
