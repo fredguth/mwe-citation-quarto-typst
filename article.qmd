@@ -1,6 +1,8 @@
 ---
 title: Untitled
 bibliography: references.bib
+filters:
+  - margin-cites.lua
 format:
   mwe-typst: 
     keep_typ: true
@@ -9,33 +11,20 @@ format:
 
 ## Task
 
-I want to create citations like @Tufte2001[p.30, dy.-3.5cm] and show it in the margin.
-A problem for the requirement bellow:
+I want to create citations like @Tufte2001[p.30, dy.-3.5cm] and show it in the margin....
 
-```{=Typst}
-#place(dx:100%+1cm, [Please don't put the citation here.])
-```
+... done!!!
 
-## Requirement
-I will need to pass a parameter for vertical displacement with something like @Typst2024[dy.-4cm] to move the citation 5em bellow.
-Also, I would need to be able to show a citation in full form @Labov1972[pp.40, dy.4.5cm]
+Another citation @Labov1972[dy.-3.5cm] and @Tufte[dy.6cm]
 
 ## Problems
-- Why the comma in `[2,]`?
-- Why supplement does not appear in bib entry (form: full)?
-- This code is ugly as hell, could it be cleaner?
-<!-- 
-I receive a citation content in `margincite` and I can't do something like:
-```
-let margincite(citation) = context {
-    if query(bibliography).len()>0 {
-      let (key, supplement, form, style) = citation.fields()
-      citation
-      place(dy:2em, dx:100%+1cm)[#cite(key, form: "full")]
-    }
-  }
-```
-because this would lead to an infinite loop
+The only problem I see now is that supplements like `p.30` should be part of the full citation text. Something like 
 
- -->
+````
+[1] E. R. Tufte, Visual Display of Quantitative Information, Second. Chesire, Con-
+necticut: Graphics Press, 2001; p.30.
+
+````
+
+I guess for each CSL there is a correct way to include the supplement, but you get the idea.
 
